@@ -27,13 +27,15 @@ I will be working with crime data from the *City of Atlanta Police Department*. 
 I will be using the [`tidyverse`](https://tidyverse.tidyverse.org/), [`ggmap`](https://www.rdocumentation.org/packages/ggmap/), [`ggdensity`](https://jamesotto852.github.io/ggdensity/) and [`geomtextpath`](https://www.rdocumentation.org/packages/geomtextpath/) packages. Below you can view the documentation for the respective package.
 
 | **Package**  | **Documentation**                                                                                     |
-|------------------------|------------------------------------------------|
+|--------------|-------------------------------------------------------------------------------------------------------|
 | *tidyverse*  | [tidyverse.tidyverse.org](https://tidyverse.tidyverse.org/)                                           |
 | *ggmap*      | [www.rdocumentation.org/packages/ggmap](https://www.rdocumentation.org/packages/ggmap/)               |
 | *ggdensity*  | [jamesotto852.github.io/ggdensity](https://jamesotto852.github.io/ggdensity/)                         |
 | *ggtextpath* | [www.rdocumentation.org/packages/geomtextpath](https://www.rdocumentation.org/packages/geomtextpath/) |
 
-<p></p>
+<p>
+
+</p>
 
 If you are missing any of these package then use this code to install them.
 
@@ -57,7 +59,9 @@ library(ggdensity)
 library(geomtextpath)
 ```
 
-<p></p>
+<p>
+
+</p>
 
 ### The data
 
@@ -72,7 +76,9 @@ Once you have the data you want to use then load it into R.
 > - *`lat`*\
 > - *`long`*
 
-<p></p>
+<p>
+
+</p>
 
 My data is in my working directory named '*atl-homicides-2021.csv*', I can use the `read_csv()` function from the `readr` package (included in tidyverse) and turn the `.csv` file into a data frame within R. I will name this data frame `cobra_df`.
 
@@ -82,7 +88,9 @@ My data is in my working directory named '*atl-homicides-2021.csv*', I can use t
 cobra_df <- read_csv("atl-homicides-2021.csv")
 ```
 
-<p></p>
+<p>
+
+</p>
 
 Next I will create a simple map that shows the general location of each reported homicide. Each reported homicide location will be marked with a red circle.
 
@@ -96,7 +104,9 @@ map_1 <- qmplot(long, lat, data = cobra_df,
 map_1
 ```
 
-<p></p>
+<p>
+
+</p>
 
 Now I want to look deeper and create a 2D density plot, using the `geom_hdr()` function from the `ggdensity` package allows me to **perform 2D density estimation**. The `geomtextpath` package creates the labels, and in this case I am creating labels on the map that correspond to the *probabilities* for a reported homicide within the respective *contoured region*.
 
@@ -113,13 +123,17 @@ map_2 <- qmplot(long, lat, data = cobra_df, geom = "blank",
 map_2
 ```
 
-<p></p>
+<p>
+
+</p>
 
 ### What did I learn from this?
 
 When I was new to **R** my favorite learning activity was to try and create crime "heatmaps" with Atlanta's crime data. Now over *1 year later* revisiting this was a good change of pace. I was able to learn about these packages and figure out how to actually extract insights from geographic data (*rather than just making cool looking maps*).
 
-<p></p>
+<p>
+
+</p>
 
 ### **Bonus!**
 
@@ -131,7 +145,9 @@ Here is a picture of the **first map** I created in **R** on May 5th, 2021.
 
 This map took many hours to make, and shows Atlanta's reported homicides from 2009-2020 including some of 2021's preliminary data.
 
-<p></p>
+<p>
+
+</p>
 
 ### Contact me
 
