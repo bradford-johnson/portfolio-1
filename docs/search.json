@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "web scraping\n\n\nrvest\n\n\n\n\n\n\n\n\n\n\n\nNov 13, 2022\n\n\nBradford Johnson\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nNov 13, 2022\n\n\nBradford Johnson\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Bradford Johnson",
@@ -7,18 +14,32 @@
     "text": "Data analyst and recent graduate of the Thinkful Data Analytics program. Proficiency with dashboarding, performance tracking, Pandas, Excel, SQL, Tableau, and Python to transform data into meaningful and easily understood visualizations and presentations. Experience in sociology provides an advantage to storytelling with data.\n\n\n\n\n\nThinkful | Data Analytics Bootcamp | June 2022 - December 2022\nWinthrop University | B.A. in Sociology | August 2017 - December 2021"
   },
   {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Blog",
+    "objectID": "posts/rvest/index.html",
+    "href": "posts/rvest/index.html",
+    "title": "Web Scraping with rvest",
     "section": "",
-    "text": "news\n\n\n\n\n\n\n\n\n\n\n\nNov 13, 2022\n\n\nBradford Johnson\n\n\n\n\n\n\nNo matching items"
+    "text": "Using the rvest package you can get the data you need from webpages for analysis.\nBelow I will show a simple script using the rvest and tidyverse packages that can scrape us some data from Wikipedia about the Seinfeld original television soundtrack.\nFirst you will need to install and load these packages, if you already have any of these packages then you just need to load them."
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "1 + 1\n\n[1] 2"
+    "objectID": "posts/rvest/index.html#install-and-load-packages",
+    "href": "posts/rvest/index.html#install-and-load-packages",
+    "title": "Web Scraping with rvest",
+    "section": "Install and Load Packages",
+    "text": "Install and Load Packages\n# install packages\n    install.packages(\"tidyverse\")\n    install.packages(\"rvest\")\n\n# load packages\n    library(tidyverse)\n    library(rvest)\n\nTo see the documentation for rvest click the hex image\n\n\n\nrvest"
+  },
+  {
+    "objectID": "posts/rvest/index.html#setting-the-parameters",
+    "href": "posts/rvest/index.html#setting-the-parameters",
+    "title": "Web Scraping with rvest",
+    "section": "Setting the Parameters",
+    "text": "Setting the Parameters\nNext you will set up the parameters so rvest knows where to get the data from. First I create the object link with the website’s link. After I can use this object as an argument for the read_html() function. This function is then assigned to the object page.\n# link to get data from\n    link <- \"https://en.wikipedia.org/wiki/Seinfeld\"\n\n# read webpage at the above link\n    page <- read_html(link)\nFor each of the columns you want to create you will need to repeat the following steps:\n\n\nCreate object with the column’s name\nUse selector gadget to get the html_nodes for this column\nRepeat the below code as shown changing each object’s name to it’s respective column name, and html_nodes\n\n\nThe html_nodes can be found using the browser extension SelectorGadget found here. Using this extension you can highlight what you want to web scrape and copy/paste the html nodes from SelectorGadget.\nFor my 3 columns: title, episodes, and length this is how the code looks:\n# scrape title\n    title <- page %>%\n        html_nodes(\".tracklist td:nth-child(2)\") %>%\n        html_text()\n\n# scrape episodes\n    episodes <- page %>%\n        html_nodes(\".tracklist td:nth-child(3)\") %>%\n        html_text()\n\n# scrape length\n    length <- page %>%\n        html_nodes(\".tracklist-length\") %>%\n        html_text()"
+  },
+  {
+    "objectID": "posts/rvest/index.html#creating-the-data-frame",
+    "href": "posts/rvest/index.html#creating-the-data-frame",
+    "title": "Web Scraping with rvest",
+    "section": "Creating the Data Frame",
+    "text": "Creating the Data Frame\nAfter getting all the data you will want to put it into a data frame to work with it, to do this use the data.frame() function. Below you will see how I am creating the data frame with the previously made objects.\nI am also using the gsub() function to clean up the title and episodes columns, here I am removing quotes. Because the function takes quotes in it’s first two arguments gsub(\"...\", \"...\", x) a backslash, “\\” is used to tell the function to ignore the next symbol allowing it through. In this case not supplying the backslash would cause an error as the argument within the quotation marks is a quotation mark causing the function break.\n# create df\n    df <- data.frame(title, episodes, length)\n\n# remove quotes from data\n    df$title <- gsub(\"\\\"\", \"\", df$title)\n    df$episodes <- gsub(\"\\\"\", \"\", df$episodes)\nNow lets see the first 6 rows of our new data frame that we crafted using rvest.\n\n# view top 6 records\n    head(df)\n\n                 title              episodes length\n1       Seinfeld Theme                         0:52\n2       Seinfeld Theme The Highlights of 100   0:40\n3       Seinfeld Theme         The Chronicle   0:33\n4 The Jerry Show Theme     The Pilot, Part 2   0:50\n5    Kramer's Pimpwalk        The Wig Master   0:53\n6    Jerry the Mailman      The Andrea Doria   0:35"
   },
   {
     "objectID": "posts/welcome/index.html",
@@ -26,26 +47,5 @@
     "title": "Welcome To My Blog",
     "section": "",
     "text": "This is the first post in a Quarto blog. Welcome!"
-  },
-  {
-    "objectID": "index.html#bio",
-    "href": "index.html#bio",
-    "title": "Bradford Johnson",
-    "section": "Bio",
-    "text": "Bio\nI’m a PhD candidate at SUNY-ESF, working on predictive modeling and visualization with a focus on natural systems. My current work focuses on using game engines as GIS to visualize large-scale landscapes with a focus on forested systems as a method for scientific communication and outreach. Past projects have focused on landscape and community ecology, and have included predictive models of forest biomass from remote sensing data and the landscape-level impacts of beaver within New York’s Adirondack State Park. In all of these projects I’ve worked to apply data science techniques to large-scale challenges, frequently serving as the statistical and technical expert within my team.\nOn this site I keep a list of"
-  },
-  {
-    "objectID": "index.html#education",
-    "href": "index.html#education",
-    "title": "Bradford Johnson",
-    "section": "Education",
-    "text": "Education\nState University of New York College of Environmental Science and Forestry\nSyracuse, NY\nPh.D. in Environmental Science | August 2020 - Present (Expected 2024)\nB.S. in Forest Ecosystem Science | August 2015 - December 2018"
-  },
-  {
-    "objectID": "index.html#selected-projects",
-    "href": "index.html#selected-projects",
-    "title": "Bradford Johnson",
-    "section": "Selected Projects",
-    "text": "Selected Projects\n\nPublications\nunifir: A Unifying API for Interacting with Unity from R. Mahoney, MJ, Beier, CM, and Ackerman, AC. 2022. Journal of Open Source Software 7(73): 4388.\nterrainr: An R package for creating immersive virtual environments. Mahoney, MJ, Beier, CM, and Ackerman, AC. 2022. Journal of Open Source Software, 7(69): 4060.\nStem size selectivity is stronger than species preferences for beaver, a central place forager. Mahoney, M. J. and Stella, J. C. 2020. Forest Ecology and Management, 475, 118331.\n\n\nR Packages\n| A Unifying API for Working with Unity in R | 2022\n| Retrieve Data from the USGS National Map and Transform it for 3D Landscape Visualizations | 2021\n| Functional Programming Concepts for R Markdown Documents | 2020"
   }
 ]

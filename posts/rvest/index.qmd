@@ -1,0 +1,130 @@
+---
+title: "Web Scraping with `rvest`"
+author: "Bradford Johnson"
+date: "2022-11-13"
+image: "josh-berendes-2zcemW2Oy8Y-unsplash.jpg"
+categories: [web scraping, rvest]
+---
+
+## **How to Web Scrape with `rvest`**
+
+Using the `rvest` package you can get the data you need from webpages for analysis.
+
+Below I will show a simple script using the `rvest` and `tidyverse` packages that can scrape us some data from Wikipedia about the Seinfeld original television soundtrack.
+
+First you will need to install and load these packages, if you already have any of these packages then you just need to load them.
+
+## Install and Load Packages
+
+``` r
+# install packages
+    install.packages("tidyverse")
+    install.packages("rvest")
+
+# load packages
+    library(tidyverse)
+    library(rvest)
+```
+
+```{r include=FALSE}
+# load packages
+    library(tidyverse)
+    library(rvest)
+```
+
+> *To see the documentation for `rvest`* click the hex image
+>
+> [![rvest](https://github.com/rstudio/hex-stickers/blob/master/thumbs/rvest.png?raw=true){width="200"}](https://rvest.tidyverse.org/)
+
+## Setting the Parameters
+
+Next you will set up the parameters so `rvest` knows where to get the data from. First I create the object `link` with the website's link. After I can use this object as an argument for the `read_html()` function. This function is then assigned to the object `page`.
+
+``` r
+# link to get data from
+    link <- "https://en.wikipedia.org/wiki/Seinfeld"
+
+# read webpage at the above link
+    page <- read_html(link)
+```
+
+For each of the columns you want to create you will need to repeat the following steps:
+
+> -   Create object with the column's name
+> -   Use selector gadget to get the `html_nodes` for this column
+> -   Repeat the below code as shown changing each object's name to it's respective column name, and `html_nodes`
+
+The `html_nodes` can be found using the browser extension `SelectorGadget` found [here](https://chrome.google.com/webstore/detail/selectorgadget/mhjhnkcfbdhnjickkkdbjoemdmbfginb). Using this extension you can highlight what you want to web scrape and copy/paste the html nodes from `SelectorGadget`.
+
+For my 3 columns: *title*, *episodes*, and *length* this is how the code looks:
+
+``` r
+# scrape title
+    title <- page %>%
+        html_nodes(".tracklist td:nth-child(2)") %>%
+        html_text()
+
+# scrape episodes
+    episodes <- page %>%
+        html_nodes(".tracklist td:nth-child(3)") %>%
+        html_text()
+
+# scrape length
+    length <- page %>%
+        html_nodes(".tracklist-length") %>%
+        html_text()
+```
+
+```{r include=FALSE}
+# link to get data from
+    link <- "https://en.wikipedia.org/wiki/Seinfeld"
+
+# read webpage at the above link
+    page <- read_html(link)
+
+# scrape title
+    title <- page %>%
+        html_nodes(".tracklist td:nth-child(2)") %>%
+        html_text()
+
+# scrape episodes
+    episodes <- page %>%
+        html_nodes(".tracklist td:nth-child(3)") %>%
+        html_text()
+
+# scrape length
+    length <- page %>%
+        html_nodes(".tracklist-length") %>%
+        html_text()
+```
+
+## Creating the Data Frame
+
+After getting all the data you will want to put it into a data frame to work with it, to do this use the `data.frame()` function. Below you will see how I am creating the data frame with the previously made objects.
+
+I am also using the `gsub()` function to clean up the *title* and *episodes* columns, here I am removing quotes. Because the function takes quotes in it's first two arguments `gsub("...", "...", x)` a backslash, "`\`" is used to tell the function to ignore the next symbol allowing it through. In this case not supplying the backslash would cause an error as the argument within the quotation marks is a quotation mark causing the function break.
+
+``` r
+# create df
+    df <- data.frame(title, episodes, length)
+
+# remove quotes from data
+    df$title <- gsub("\"", "", df$title)
+    df$episodes <- gsub("\"", "", df$episodes)
+```
+
+```{r include=FALSE}
+# create df
+    df <- data.frame(title, episodes, length)
+
+# remove quotes from data
+    df$title <- gsub("\"", "", df$title)
+    df$episodes <- gsub("\"", "", df$episodes)
+```
+
+Now lets see the first 6 rows of our new data frame that we crafted using `rvest`.
+
+```{r warning=FALSE,message=FALSE,error=FALSE}
+# view top 6 records
+    head(df)
+```
