@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Bradford Johnson",
+    "section": "",
+    "text": "Data analyst and recent graduate of the Thinkful Data Analytics program. Proficiency with dashboarding, performance tracking, Pandas, Excel, SQL, Tableau, and Python to transform data into meaningful and easily understood visualizations and presentations. Experience in sociology provides an advantage to storytelling with data.\n\n\n\n\n\nThinkful Data Analytics Bootcamp | June 2022 - December 2022\nWinthrop University | B.A. in Sociology | August 2017 - December 2021"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "news\n\n\n\n\n\n\n\n\n\n\n\nNov 10, 2022\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "Since this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "index.html#bio",
+    "href": "index.html#bio",
+    "title": "Bradford Johnson",
+    "section": "Bio",
+    "text": "Bio\nI’m a PhD candidate at SUNY-ESF, working on predictive modeling and visualization with a focus on natural systems. My current work focuses on using game engines as GIS to visualize large-scale landscapes with a focus on forested systems as a method for scientific communication and outreach. Past projects have focused on landscape and community ecology, and have included predictive models of forest biomass from remote sensing data and the landscape-level impacts of beaver within New York’s Adirondack State Park. In all of these projects I’ve worked to apply data science techniques to large-scale challenges, frequently serving as the statistical and technical expert within my team.\nOn this site I keep a list of"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Bradford Johnson",
+    "section": "Education",
+    "text": "Education\nState University of New York College of Environmental Science and Forestry\nSyracuse, NY\nPh.D. in Environmental Science | August 2020 - Present (Expected 2024)\nB.S. in Forest Ecosystem Science | August 2015 - December 2018"
+  },
+  {
+    "objectID": "index.html#selected-projects",
+    "href": "index.html#selected-projects",
+    "title": "Bradford Johnson",
+    "section": "Selected Projects",
+    "text": "Selected Projects\n\nPublications\nunifir: A Unifying API for Interacting with Unity from R. Mahoney, MJ, Beier, CM, and Ackerman, AC. 2022. Journal of Open Source Software 7(73): 4388.\nterrainr: An R package for creating immersive virtual environments. Mahoney, MJ, Beier, CM, and Ackerman, AC. 2022. Journal of Open Source Software, 7(69): 4060.\nStem size selectivity is stronger than species preferences for beaver, a central place forager. Mahoney, M. J. and Stella, J. C. 2020. Forest Ecology and Management, 475, 118331.\n\n\nR Packages\n| A Unifying API for Working with Unity in R | 2022\n| Retrieve Data from the USGS National Map and Transform it for 3D Landscape Visualizations | 2021\n| Functional Programming Concepts for R Markdown Documents | 2020"
+  }
+]
