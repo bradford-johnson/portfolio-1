@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "ggmap\n\n\nmap\n\n\n\n\n\n\n\n\n\n\n\nNov 14, 2022\n\n\nBradford Johnson\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nweb scraping\n\n\nrvest\n\n\n\n\n\n\n\n\n\n\n\nNov 13, 2022\n\n\nBradford Johnson\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nNov 13, 2022\n\n\nBradford Johnson\n\n\n\n\n\n\nNo matching items"
+    "text": "ggmap\n\n\nmap\n\n\n\n\n\n\n\n\n\n\n\nNov 14, 2022\n\n\nBradford Johnson\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nweb scraping\n\n\nrvest\n\n\n\n\n\n\n\n\n\n\n\nNov 13, 2022\n\n\nBradford Johnson\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -47,12 +47,5 @@
     "title": "Web Scraping with rvest",
     "section": "Creating the Data Frame",
     "text": "Creating the Data Frame\nAfter getting all the data you will want to put it into a data frame to work with it, to do this use the data.frame() function. Below you will see how I am creating the data frame with the previously made objects.\nI am also using the gsub() function to clean up the title and episodes columns, here I am removing quotes. Because the function takes quotes in it’s first two arguments gsub(\"...\", \"...\", x) a backslash, “\\” is used to tell the function to ignore the next symbol allowing it through. In this case not supplying the backslash would cause an error as the argument within the quotation marks is a quotation mark causing the function break.\n# create df\n    df <- data.frame(title, episodes, length)\n\n# remove quotes from data\n    df$title <- gsub(\"\\\"\", \"\", df$title)\n    df$episodes <- gsub(\"\\\"\", \"\", df$episodes)\nNow lets see the first 6 rows of our new data frame that we crafted using rvest.\n\n# view top 6 records\n    head(df)\n\n                 title              episodes length\n1       Seinfeld Theme                         0:52\n2       Seinfeld Theme The Highlights of 100   0:40\n3       Seinfeld Theme         The Chronicle   0:33\n4 The Jerry Show Theme     The Pilot, Part 2   0:50\n5    Kramer's Pimpwalk        The Wig Master   0:53\n6    Jerry the Mailman      The Andrea Doria   0:35"
-  },
-  {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
-    "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!"
   }
 ]
