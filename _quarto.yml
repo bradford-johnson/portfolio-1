@@ -1,5 +1,6 @@
 project:
   type: website
+  resources: resume.pdf
   output-dir: docs
 
 website:
