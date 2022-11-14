@@ -6,7 +6,7 @@ image: "josh-berendes-2zcemW2Oy8Y-unsplash.jpg"
 categories: [web scraping, rvest]
 ---
 
-## **How to Web Scrape with `rvest`**
+## **How to web scrape with `rvest`**
 
 Using the `rvest` package you can get the data you need from webpages for analysis.
 
@@ -14,7 +14,7 @@ Below I will show a simple script using the `rvest` and `tidyverse` packages tha
 
 First you will need to install and load these packages, if you already have any of these packages then you just need to load them.
 
-## Install and Load Packages
+## Install and load packages
 
 ``` r
 # install packages
@@ -34,9 +34,9 @@ First you will need to install and load these packages, if you already have any 
 
 > *To see the documentation for `rvest`* click the hex image
 >
-> [![rvest](https://github.com/rstudio/hex-stickers/blob/master/thumbs/rvest.png?raw=true){width="200"}](https://rvest.tidyverse.org/)
+> [![](https://github.com/rstudio/hex-stickers/blob/master/thumbs/rvest.png?raw=true){width="200"}](https://rvest.tidyverse.org/)
 
-## Setting the Parameters
+## Setting the parameters
 
 Next you will set up the parameters so `rvest` knows where to get the data from. First I create the object `link` with the website's link. After I can use this object as an argument for the `read_html()` function. This function is then assigned to the object `page`.
 
@@ -98,7 +98,7 @@ For my 3 columns: *title*, *episodes*, and *length* this is how the code looks:
         html_text()
 ```
 
-## Creating the Data Frame
+## Creating the data frame
 
 After getting all the data you will want to put it into a data frame to work with it, to do this use the `data.frame()` function. Below you will see how I am creating the data frame with the previously made objects.
 

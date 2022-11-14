@@ -197,13 +197,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <section id="how-to-web-scrape-with-rvest" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-web-scrape-with-rvest"><strong>How to Web Scrape with <code>rvest</code></strong></h2>
+<h2 class="anchored" data-anchor-id="how-to-web-scrape-with-rvest"><strong>How to web scrape with <code>rvest</code></strong></h2>
 <p>Using the <code>rvest</code> package you can get the data you need from webpages for analysis.</p>
 <p>Below I will show a simple script using the <code>rvest</code> and <code>tidyverse</code> packages that can scrape us some data from Wikipedia about the Seinfeld original television soundtrack.</p>
 <p>First you will need to install and load these packages, if you already have any of these packages then you just need to load them.</p>
 </section>
 <section id="install-and-load-packages" class="level2">
-<h2 class="anchored" data-anchor-id="install-and-load-packages">Install and Load Packages</h2>
+<h2 class="anchored" data-anchor-id="install-and-load-packages">Install and load packages</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install packages</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">install.packages</span>(<span class="st">"rvest"</span>)</span>
@@ -216,13 +216,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="https://rvest.tidyverse.org/"><img src="https://github.com/rstudio/hex-stickers/blob/master/thumbs/rvest.png?raw=true" class="img-fluid figure-img" width="200"></a></p>
-<p></p><figcaption class="figure-caption">rvest</figcaption><p></p>
 </figure>
 </div>
 </blockquote>
 </section>
 <section id="setting-the-parameters" class="level2">
-<h2 class="anchored" data-anchor-id="setting-the-parameters">Setting the Parameters</h2>
+<h2 class="anchored" data-anchor-id="setting-the-parameters">Setting the parameters</h2>
 <p>Next you will set up the parameters so <code>rvest</code> knows where to get the data from. First I create the object <code>link</code> with the website’s link. After I can use this object as an argument for the <code>read_html()</code> function. This function is then assigned to the object <code>page</code>.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># link to get data from</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    link <span class="ot">&lt;-</span> <span class="st">"https://en.wikipedia.org/wiki/Seinfeld"</span></span>
@@ -255,7 +254,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>        <span class="fu">html_text</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="creating-the-data-frame" class="level2">
-<h2 class="anchored" data-anchor-id="creating-the-data-frame">Creating the Data Frame</h2>
+<h2 class="anchored" data-anchor-id="creating-the-data-frame">Creating the data frame</h2>
 <p>After getting all the data you will want to put it into a data frame to work with it, to do this use the <code>data.frame()</code> function. Below you will see how I am creating the data frame with the previously made objects.</p>
 <p>I am also using the <code>gsub()</code> function to clean up the <em>title</em> and <em>episodes</em> columns, here I am removing quotes. Because the function takes quotes in it’s first two arguments <code>gsub("...", "...", x)</code> a backslash, “<code>\</code>” is used to tell the function to ignore the next symbol allowing it through. In this case not supplying the backslash would cause an error as the argument within the quotation marks is a quotation mark causing the function break.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create df</span></span>
