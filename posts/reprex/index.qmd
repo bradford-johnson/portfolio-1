@@ -32,7 +32,7 @@ Check out this quick video that shows the process of making and sharing a reprex
 
 ## How to make and use reprexes
 
-1. **Install the `reprex` package, if you have `tidyverse` installed then you already have `reprex` so can skip this step**
+1.  **Install the `reprex` package, if you have `tidyverse` installed then you already have `reprex` so can skip this step**
 
     -   Install `reprex` only
 
@@ -48,7 +48,7 @@ Check out this quick video that shows the process of making and sharing a reprex
 
     <br>
 
-2. **Have code that you want to share to others, and even allow them to reproduce**
+2.  **Have code that you want to share to others, and even allow them to reproduce**
 
     -   Here is the code that I want to reproduce:
 
@@ -67,7 +67,7 @@ Check out this quick video that shows the process of making and sharing a reprex
 
     <br>
 
-3. **Load in the `reprex` package**
+3.  **Load in the `reprex` package**
 
     ``` r
     library(reprex)
@@ -75,11 +75,11 @@ Check out this quick video that shows the process of making and sharing a reprex
 
     <br>
 
-4. **Select and copy `CTRL + C` all the code you want to make into a reprex**
+4.  **Select and copy `CTRL + C` all the code you want to make into a reprex**
 
     <br>
 
-5. **In the RStudio console run:**
+5.  **In the RStudio console run:**
 
     ``` r
     reprex()
@@ -87,7 +87,7 @@ Check out this quick video that shows the process of making and sharing a reprex
 
     <br>
 
-6. **Paste and share your reprex!**
+6.  **Paste and share your reprex!**
 
     -   Here is mine:
 
@@ -112,7 +112,7 @@ mtcars %>%
 ```
 
 | estimate  | estimate1 | estimate2 | statistic | p.value      | parameter | conf.low  | conf.high | method                  | alternative |
-|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
+|-----------|-----------|-----------|-----------|--------------|-----------|-----------|-----------|-------------------------|-------------|
 | -7.940476 | 16.61667  | 24.55714  | -4.667053 | 0.0001098368 | 22.71576  | -11.46251 | -4.418445 | Welch Two Sample t-test | two.sided   |
 
 <sup>Created on 2022-11-15 with [reprex v2.0.2](https://reprex.tidyverse.org)</sup>
