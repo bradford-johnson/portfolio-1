@@ -1,0 +1,128 @@
+---
+title: "Creating reproducible examples with `reprex`"
+author: "Bradford Johnson"
+date: "2022-11-16"
+image: "todd-gallant-M5UESy7loBQ-unsplash.jpg"
+categories: [reprex, core essential]
+---
+
+## What is a reprex?
+
+A **reprex**, or **repr**oducible **ex**ample, is an easier way to share code with others in a "*reproducible*" way. All you need to do after making a reprex is paste it into GitHub, Stack Overflow, etc.
+
+<br>
+
+Romain François came up with the term in *this tweet*:
+
+{{< tweet user=romain_francois id=530011023743655936 >}}
+
+<br>
+
+Check out this quick video that shows the process of making and sharing a reprex, it is super easy to do!
+
+<br>
+
+<center>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/35suhGR53wQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+</iframe>
+
+</center>
+
+## How to make and use reprexes
+
+1. **Install the `reprex` package, if you have `tidyverse` installed then you already have `reprex` so can skip this step**
+
+    -   Install `reprex` only
+
+    ``` r
+    install.packages("reprex")
+    ```
+
+    -   Or install the `tidyverse` meta package + `reprex` package
+
+    ``` r
+    install.packages("tidyverse")
+    ```
+
+    <br>
+
+2. **Have code that you want to share to others, and even allow them to reproduce**
+
+    -   Here is the code that I want to reproduce:
+
+    ``` r
+    library(dplyr)
+    library(gt)
+    library(broom)
+
+    mtcars %>%
+      do(tidy(t.test(.$mpg ~ .$am))) %>%
+      gt()
+    ```
+
+    -   This code will use the mtcars data, included in `RStudio`, and conduct a t-test between cars with automatic transmissions (0) and cars with manual transmissions (1)
+    -   The results of the `t.test()` are then shown in the format of a table for easy viewing
+
+    <br>
+
+3. **Load in the `reprex` package**
+
+    ``` r
+    library(reprex)
+    ```
+
+    <br>
+
+4. **Select and copy `CTRL + C` all the code you want to make into a reprex**
+
+    <br>
+
+5. **In the RStudio console run:**
+
+    ``` r
+    reprex()
+    ```
+
+    <br>
+
+6. **Paste and share your reprex!**
+
+    -   Here is mine:
+
+``` r
+library(dplyr)
+#> 
+#> Attaching package: 'dplyr'
+#> The following objects are masked from 'package:stats':
+#> 
+#>     filter, lag
+#> The following objects are masked from 'package:base':
+#> 
+#>     intersect, setdiff, setequal, union
+library(gt)
+#> Warning: package 'gt' was built under R version 4.1.3
+library(broom)
+#> Warning: package 'broom' was built under R version 4.1.3
+
+mtcars %>%
+  do(tidy(t.test(.$mpg ~ .$vs))) %>%
+  gt()
+```
+
+| estimate  | estimate1 | estimate2 | statistic | p.value      | parameter | conf.low  | conf.high | method                  | alternative |
+|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
+| -7.940476 | 16.61667  | 24.55714  | -4.667053 | 0.0001098368 | 22.71576  | -11.46251 | -4.418445 | Welch Two Sample t-test | two.sided   |
+
+<sup>Created on 2022-11-15 with [reprex v2.0.2](https://reprex.tidyverse.org)</sup>
+
+<br>
+
+## Making a good reprex
+
+> -   Check out the [reprex do's and don'ts](https://cran.r-project.org/web/packages/reprex/vignettes/reprex-dos-and-donts.html) to get familiar with reprex etiquette.
+>
+> -   Click the hex image to view the `reprex` documentation
+
+[![](reprex.svg){width="200"}](https://reprex.tidyverse.org/)

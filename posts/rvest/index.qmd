@@ -3,7 +3,7 @@ title: "Web scraping with `rvest`"
 author: "Bradford Johnson"
 date: "2022-11-13"
 image: "josh-berendes-2zcemW2Oy8Y-unsplash.jpg"
-categories: [web scraping, rvest]
+categories: [web scraping, rvest, core essential]
 ---
 
 ## **How to web scrape with `rvest`**
