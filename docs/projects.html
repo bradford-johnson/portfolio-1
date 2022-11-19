@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Bradford Johnson - Blog</title>
+<title>Bradford Johnson - Projects</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,9 +70,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -115,10 +115,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./index.html">Home</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html">Projects</a>
+    <a class="nav-link active" href="./projects.html" aria-current="page">Projects</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./blog.html" aria-current="page">Blog</a>
+    <a class="nav-link" href="./blog.html">Blog</a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/bradfordjohnson/portfolio"><i class="bi bi-github" role="img">
@@ -134,8 +134,8 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Blog</h1>
+    <div class="quarto-title column-page">
+      <h1 class="title">Projects</h1>
                       </div>
   </div>
     
@@ -150,11 +150,9 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="core essential">core essential <span class="quarto-category-count">(2)</span></div><div class="category" data-category="ggmap">ggmap <span class="quarto-category-count">(1)</span></div><div class="category" data-category="map">map <span class="quarto-category-count">(1)</span></div><div class="category" data-category="reprex">reprex <span class="quarto-category-count">(1)</span></div><div class="category" data-category="rvest">rvest <span class="quarto-category-count">(1)</span></div><div class="category" data-category="web scraping">web scraping <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
 
 
 
@@ -163,124 +161,32 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="reprex,core essential" data-listing-date-sort="1668574800000" data-listing-file-modified-sort="1668549649795" data-listing-reading-time-sort="2.725">
-<div class="thumbnail">
-<p><a href="./posts/reprex/index.html"> <img src="./posts/reprex/todd-gallant-M5UESy7loBQ-unsplash.jpg" class="thumnail-image"> </a></p>
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-listing-date-sort="1662350400000" data-listing-file-modified-sort="1668864290836" data-listing-reading-time-sort="2.185">
+<a href="./projects/lariat-rentals/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./projects/lariat-rentals/images/dynamic/lariat-logo.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Lariat Rentals
+</h5>
+<div class="card-text listing-description">
+<em>Rental fleet business analysis | Revenue growth model</em>
 </div>
-<div class="body">
-<a href="./posts/reprex/index.html">
-<h3 class="no-anchor listing-title">
-Creating reproducible examples with <code>reprex</code>
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('reprex'); return false;">
-reprex
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('core essential'); return false;">
-core essential
-</div>
-</div>
-<a href="./posts/reprex/index.html">
-<div class="listing-description">
-A <strong>reprex</strong>, or <strong>repr</strong>oducible <strong>ex</strong>ample, is an easier way to share code with others in a “<em>reproducible</em>” way. All you need to do after making a reprex is paste it into GitHub, Stack Overflow, etc.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/reprex/index.html">
-<div class="listing-date">
-Nov 16, 2022
-</div>
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
-Bradford Johnson
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="ggmap,map" data-listing-date-sort="1668402000000" data-listing-file-modified-sort="1668383290110" data-listing-reading-time-sort="3.86">
-<div class="thumbnail">
-<p><a href="./posts/ggmap/index.html"> <img src="./posts/ggmap/edgar-moran-Ky9JHrdvb1o-unsplash.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/ggmap/index.html">
-<h3 class="no-anchor listing-title">
-Making maps with <code>ggmap</code>
-</h3>
-<div class="listing-subtitle">
 
 </div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('ggmap'); return false;">
-ggmap
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('map'); return false;">
-map
-</div>
-</div>
-<a href="./posts/ggmap/index.html">
-<div class="listing-description">
-The <code>ggmap</code> package makes life easier when you are trying to visualize geographic data.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/ggmap/index.html">
 <div class="listing-date">
-Nov 14, 2022
+Sep 5, 2022
 </div>
-<div class="listing-author">
-Bradford Johnson
+</div>
+</div>
 </div>
 </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="web scraping,rvest,core essential" data-listing-date-sort="1668315600000" data-listing-file-modified-sort="1668542781995" data-listing-reading-time-sort="3.395">
-<div class="thumbnail">
-<p><a href="./posts/rvest/index.html"> <img src="./posts/rvest/josh-berendes-2zcemW2Oy8Y-unsplash.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/rvest/index.html">
-<h3 class="no-anchor listing-title">
-Web scraping with <code>rvest</code>
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('web scraping'); return false;">
-web scraping
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('rvest'); return false;">
-rvest
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('core essential'); return false;">
-core essential
-</div>
-</div>
-<a href="./posts/rvest/index.html">
-<div class="listing-description">
-Using the <code>rvest</code> package you can get the data you need from webpages for analysis.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/rvest/index.html">
-<div class="listing-date">
-Nov 13, 2022
-</div>
-<div class="listing-author">
-Bradford Johnson
-</div>
-</a>
-</div>
 </div>
 </div>
 <div class="listing-no-matching d-none">

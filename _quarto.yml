@@ -9,6 +9,7 @@ website:
     right: 
       - text: "Home"
         file: index.qmd
+      - projects.qmd
       - blog.qmd
       - icon: github
         href: "https://github.com/bradfordjohnson/portfolio"
