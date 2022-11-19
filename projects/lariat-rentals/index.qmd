@@ -10,6 +10,7 @@ editor: visual
 
 [<img src="images/dynamic/lariat-logo.jpg" width="358px"/>](https://github.com/bradfordjohnson/lariat-rentals/blob/main/README.md)
 
+::: column-page-inset
 ## Project Summary 🗒️
 
 ### 🧭`- Project scenario`
@@ -48,11 +49,15 @@ editor: visual
 
     <img src="images/dynamic/days-rented-1.png"/>
 
+    <br>
+
 -   Group vehicles by model year for baseline
 
     -   Break down "the numbers" to the daily level (ex. Revenue per day, cost per day...)
 
     <img src="images/dynamic/baseline-table.png"/>
+
+    <br>
 
 -   Create a user scenario that can take custom values and apply them to the baseline
 
@@ -91,3 +96,4 @@ editor: visual
     -   When doing this assume a decrease in total days rented
 
 <img src="images/dynamic/us-chart.png"/>
+:::
