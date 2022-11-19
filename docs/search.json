@@ -70,6 +70,20 @@
     "text": "Creating the data frame\nAfter getting all the data you will want to put it into a data frame to work with it, to do this use the data.frame() function. Below you will see how I am creating the data frame with the previously made objects.\nI am also using the gsub() function to clean up the title and episodes columns, here I am removing quotes. Because the function takes quotes in it’s first two arguments gsub(\"...\", \"...\", x) a backslash, “\\” is used to tell the function to ignore the next symbol allowing it through. In this case not supplying the backslash would cause an error as the argument within the quotation marks is a quotation mark causing the function break.\n# create df\n    df <- data.frame(title, episodes, length)\n\n# remove quotes from data\n    df$title <- gsub(\"\\\"\", \"\", df$title)\n    df$episodes <- gsub(\"\\\"\", \"\", df$episodes)\nNow lets see the first 6 rows of our new data frame that we crafted using rvest.\n\n# view top 6 records\n    head(df)\n\n                 title              episodes length\n1       Seinfeld Theme                         0:52\n2       Seinfeld Theme The Highlights of 100   0:40\n3       Seinfeld Theme         The Chronicle   0:33\n4 The Jerry Show Theme     The Pilot, Part 2   0:50\n5    Kramer's Pimpwalk        The Wig Master   0:53\n6    Jerry the Mailman      The Andrea Doria   0:35"
   },
   {
+    "objectID": "projects/fuel-economy/index.html",
+    "href": "projects/fuel-economy/index.html",
+    "title": "Fuel Economy",
+    "section": "",
+    "text": "Statistical Significance | Fuel Economy"
+  },
+  {
+    "objectID": "projects/fuel-economy/index.html#project-summary",
+    "href": "projects/fuel-economy/index.html#project-summary",
+    "title": "Fuel Economy",
+    "section": "Project Summary 🗒️",
+    "text": "Project Summary 🗒️\n\n🧭- Project scenario\n\nProvide data-backed analysis and recommendations around vehicle fuel economy\nClient is interested in vehicle types, manufacturers, and technical specs\nThey want to understand how those might drive fuel economy and annual fuel costs\n\n\n\n\n\n\n\nProject Objective\n\n\n\n\nIdentify and conduct statistical tests on factors that drive fuel economy and annual costs\n\n\n\n\n\n📂- Deliverables\nClick the icons or text below to see my project files and deliverables\n\n\n\nPowerPoint\nExcel\n\n\n\n\n\n\n\n\n\n\n\n🔧- Methods\n\n\n\n\n\n\nResearch Questions\n\n\n\n\nDoes the Start / Stop Technology make a significant difference in fuel costs / consumption?\n\n\nDoes the car’s “age” or model year have a significant difference in fuel economy?\n\n\nHow significant is the car’s class (car type: minivan, truck, compact…) in the consumption of fuel?\n\n\n\n\nMost vehicles use regular gas as a fuel type -> focus on regular gas vehicles\n\nRegular gas is convenient, and already has nationwide infrastructure\n\nSubcompact and compact vehicles are the most common classes -> focus on these car classes\n\nThese two classes are the most popular and they are quite similar in specific metrics\n\nCar “age” determined by the model year -> focus on new vs used\n\n\n\n\n🔍- Findings\n\n\nStart Stop Technology - Fuel Cost\n\n\n\nCar Class - Combined MPG\n\n\n\nCar Age - Used Fuel Quantity\n\n\n\n5 Year Savings and Spending\n\n\n\n💡- Recommendations\n\nFor fuel economy and savings, without sacrificing the convenience of regular gas, use cars with Start / Stop Technology\nPrioritize using newer cars (2015 and newer) as on average they have a significantly better combined MPG than older counterparts\nImplementing the above and using the compact vehicle class will offer the best savings in terms of fuel economy"
+  },
+  {
     "objectID": "projects/lariat-rentals/index.html",
     "href": "projects/lariat-rentals/index.html",
     "title": "Lariat Rentals",
@@ -88,6 +102,6 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Sep 5, 2022\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Nov 2, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSep 5, 2022\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]

@@ -13,7 +13,7 @@ editor: visual
 ::: column-page-inset
 ## Project Summary 🗒️
 
-### 🧭`- Project scenario`
+### 🧭- Project scenario
 
 -   I am consulting as a data analyst for Lariat
 
@@ -31,17 +31,17 @@ editor: visual
 
 <br>
 
-### 📂`- Deliverables`
+### 📂- Deliverables
 
 *Click the icons or text below to see my project files and deliverables*
 
 |                        [PowerPoint](https://1drv.ms/p/s!Ahpkb3AfX4xfhLwtwCAS3g6L6ZA6sQ?e=3JhUY6)                         |                           [Excel](https://1drv.ms/x/s!Ahpkb3AfX4xfhLw5nv0BCOoHdWSS5g?e=knZCre)                           |
-|:----------------------------------:|:----------------------------------:|
+|:------------------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------:|
 | [<img src="images/static/filetype-pptx.svg" width="54px"/>](https://1drv.ms/p/s!Ahpkb3AfX4xfhLwtwCAS3g6L6ZA6sQ?e=3JhUY6) | [<img src="images/static/filetype-xlsx.svg" width="54px"/>](https://1drv.ms/x/s!Ahpkb3AfX4xfhLw5nv0BCOoHdWSS5g?e=knZCre) |
 
 <br>
 
-### 🔧`- Methods`
+### 🔧- Methods
 
 -   Data cleaning and exploration
 
@@ -63,7 +63,7 @@ editor: visual
 
 <img src="images/dynamic/us-table.png"/>
 
-### 🔍`- Findings`
+### 🔍- Findings
 
 -   The top 4 most popular car makes: Ford, Chevrolet, Dodge, and Toyota
 
@@ -81,7 +81,7 @@ editor: visual
 
 <br>
 
-### 💡`- Recommendations`
+### 💡- Recommendations
 
 -   **Minimizing Costs**
 
