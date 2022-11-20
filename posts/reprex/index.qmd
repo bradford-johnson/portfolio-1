@@ -1,6 +1,5 @@
 ---
 title: "Creating reproducible examples with `reprex`"
-author: "Bradford Johnson"
 date: "2022-11-16"
 image: "todd-gallant-M5UESy7loBQ-unsplash.jpg"
 categories: [reprex, core essential]
@@ -112,7 +111,7 @@ mtcars %>%
 ```
 
 | estimate  | estimate1 | estimate2 | statistic | p.value      | parameter | conf.low  | conf.high | method                  | alternative |
-|-----------|-----------|-----------|-----------|--------------|-----------|-----------|-----------|-------------------------|-------------|
+|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
 | -7.940476 | 16.61667  | 24.55714  | -4.667053 | 0.0001098368 | 22.71576  | -11.46251 | -4.418445 | Welch Two Sample t-test | two.sided   |
 
 <sup>Created on 2022-11-15 with [reprex v2.0.2](https://reprex.tidyverse.org)</sup>

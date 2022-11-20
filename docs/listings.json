@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/postgresql/index.html",
       "/posts/reprex/index.html",
       "/posts/ggmap/index.html",
       "/posts/rvest/index.html"

@@ -1,6 +1,5 @@
 ---
 title: "Web scraping with `rvest`"
-author: "Bradford Johnson"
 date: "2022-11-13"
 image: "josh-berendes-2zcemW2Oy8Y-unsplash.jpg"
 categories: [web scraping, rvest, core essential]
@@ -34,7 +33,7 @@ First you will need to install and load these packages, if you already have any 
 
 > *To see the documentation for `rvest`* click the hex image
 >
-> [![](https://github.com/rstudio/hex-stickers/blob/master/thumbs/rvest.png?raw=true){width="200"}](https://rvest.tidyverse.org/)
+> [![](rvest.png){width="200"}](https://rvest.tidyverse.org/)
 
 ## Setting the parameters
 

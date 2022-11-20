@@ -1,6 +1,5 @@
 ---
 title: "Making maps with `ggmap`"
-author: "Bradford Johnson"
 date: "2022-11-14"
 categories: [ggmap, map]
 image: "edgar-moran-Ky9JHrdvb1o-unsplash.jpg"
@@ -27,7 +26,7 @@ I will be working with crime data from the *City of Atlanta Police Department*. 
 I will be using the [`tidyverse`](https://tidyverse.tidyverse.org/), [`ggmap`](https://www.rdocumentation.org/packages/ggmap/), [`ggdensity`](https://jamesotto852.github.io/ggdensity/) and [`geomtextpath`](https://www.rdocumentation.org/packages/geomtextpath/) packages. Below you can view the documentation for the respective package.
 
 | **Package**  | **Documentation**                                                                                     |
-|--------------|-------------------------------------------------------------------------------------------------------|
+|--------------|----------------------------------------------------------|
 | *tidyverse*  | [tidyverse.tidyverse.org](https://tidyverse.tidyverse.org/)                                           |
 | *ggmap*      | [www.rdocumentation.org/packages/ggmap](https://www.rdocumentation.org/packages/ggmap/)               |
 | *ggdensity*  | [jamesotto852.github.io/ggdensity](https://jamesotto852.github.io/ggdensity/)                         |
