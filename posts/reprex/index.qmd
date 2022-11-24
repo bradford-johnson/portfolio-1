@@ -7,7 +7,9 @@ categories: [reprex, core essential]
 
 ## What is a reprex?
 
-A **reprex**, or **repr**oducible **ex**ample, is an easier way to share code with others in a "*reproducible*" way. All you need to do after making a reprex is paste it into GitHub, Stack Overflow, etc.
+A **reprex**, or **repr**oducible **ex**ample, is an easier way to share code with others in a "*reproducible*" way.
+
+All you need to do after making a reprex is paste it into GitHub, Stack Overflow, etc.
 
 <br>
 

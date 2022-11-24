@@ -11,7 +11,9 @@ toc-location: left
 ::: column-page
 ## Why use `R` and PostgreSQL together?
 
-Importing data from a database directly into `R` for analysis or reporting allows for the optimizing of workflows. The ability to combine `SQL` and `R` is huge for extracting insights from your database.
+Importing data from a database directly into `R` for analysis or reporting allows for the optimizing of workflows.
+
+The ability to combine `SQL` and `R` is huge for extracting insights from your database.
 
 There are countless use cases and workflows that can implemented once you pair `R` and PostgreSQL and I will share one of my recent workflows.
 

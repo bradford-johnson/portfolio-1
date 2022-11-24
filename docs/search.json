@@ -25,7 +25,7 @@
     "href": "posts/postgresql/index.html",
     "title": "PostgreSQL databases and R",
     "section": "",
-    "text": "Importing data from a database directly into R for analysis or reporting allows for the optimizing of workflows. The ability to combine SQL and R is huge for extracting insights from your database.\nThere are countless use cases and workflows that can implemented once you pair R and PostgreSQL and I will share one of my recent workflows.\n\nTweet sentiment analysis (project workflow)\n\nIn this workflow, I use various packages and methods to scrape Tweets from Twitter in R. I split the data into two separate data frames, one with more text related Tweet data, the other for the Tweet metadata. I gave each data frame a primary key, for identification purposes, and for future SQL joins. Next I save the two data frames of scraped data in a PostgreSQL database. I can add more data or I could move on to the analysis step\n\n\n\nWhen I move on to the analysis stage I first connect to my database and then I can begin executing SQL queries, which are returned as data frames in R, meaning I can immediately use the results of a query and visualize them with ggplot2 or continue cleaning and wrangling the data with packages like tidytext or dplyr."
+    "text": "Importing data from a database directly into R for analysis or reporting allows for the optimizing of workflows.\nThe ability to combine SQL and R is huge for extracting insights from your database.\nThere are countless use cases and workflows that can implemented once you pair R and PostgreSQL and I will share one of my recent workflows.\n\nTweet sentiment analysis (project workflow)\n\nIn this workflow, I use various packages and methods to scrape Tweets from Twitter in R. I split the data into two separate data frames, one with more text related Tweet data, the other for the Tweet metadata. I gave each data frame a primary key, for identification purposes, and for future SQL joins. Next I save the two data frames of scraped data in a PostgreSQL database. I can add more data or I could move on to the analysis step\n\n\n\nWhen I move on to the analysis stage I first connect to my database and then I can begin executing SQL queries, which are returned as data frames in R, meaning I can immediately use the results of a query and visualize them with ggplot2 or continue cleaning and wrangling the data with packages like tidytext or dplyr."
   },
   {
     "objectID": "posts/postgresql/index.html#how-to-connect-to-a-postgresql-database-with-r",
@@ -39,7 +39,7 @@
     "href": "posts/reprex/index.html",
     "title": "Creating reproducible examples with reprex",
     "section": "",
-    "text": "A reprex, or reproducible example, is an easier way to share code with others in a “reproducible” way. All you need to do after making a reprex is paste it into GitHub, Stack Overflow, etc.\n\nRomain François came up with the term in this tweet:\n\n\nCheck out this quick video that shows the process of making and sharing a reprex, it is super easy to do!"
+    "text": "A reprex, or reproducible example, is an easier way to share code with others in a “reproducible” way.\nAll you need to do after making a reprex is paste it into GitHub, Stack Overflow, etc.\n\nRomain François came up with the term in this tweet:\n\n\nCheck out this quick video that shows the process of making and sharing a reprex, it is super easy to do!"
   },
   {
     "objectID": "posts/reprex/index.html#how-to-make-and-use-reprexes",
