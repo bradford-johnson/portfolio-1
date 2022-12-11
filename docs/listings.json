@@ -11,6 +11,7 @@
   {
     "listing": "/projects.html",
     "items": [
+      "/projects/vending-machines/index.html",
       "/projects/fuel-economy/index.html",
       "/projects/lariat-rentals/index.html"
     ]
